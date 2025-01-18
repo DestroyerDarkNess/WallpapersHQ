@@ -60,8 +60,11 @@ class Home:
         self.page.update()
 
 
-if __name__ == "__main__": 
-    def main(page: ft.Page):
-        home = Home(page)
+# if __name__ == "__main__": 
+#     def main(page: ft.Page):
+#         home = Home(page)
 
-    ft.app(main)
+#     ft.app(main)
+
+# def debugging_view(page: ft.Page):
+#     return Home(page)

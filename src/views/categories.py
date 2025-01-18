@@ -9,12 +9,7 @@ carousel_images = list(
         "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2021_18/1712998/strawberry-shortcake-kb-main-210505.jpg"
     ]
 )
-  
-def main(page: ft.Page):
-    page.add(
-        Carousel(carousel_images, shuffle=True)
-    )
-    page.update()
 
-ft.app(main)
+def debugging_view(page: ft.Page):
+    return Carousel(carousel_images, shuffle=True)
  
