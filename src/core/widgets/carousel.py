@@ -46,8 +46,8 @@ class Carousel(ft.UserControl):
     def __init__(self,
                  images: List[str],
                  shuffle: bool = False,
-                 active_color: str = ft.colors.BLACK,
-                 inactive_color: str = ft.colors.WHITE):
+                 active_color: str = ft.Colors.BLACK,
+                 inactive_color: str = ft.Colors.WHITE):
         super().__init__()
         self.inactive_color = inactive_color
         self.active_color = active_color
@@ -128,15 +128,16 @@ class Carousel(ft.UserControl):
                             content=ft.Row(ref=self.carousel_btn_container_ref,
                                            controls=[
                                                ft.IconButton(data=img,
-                                                             icon=ft.icons.CIRCLE,
+                                                             icon=ft.Icons.CIRCLE_OUTLINED,
                                                              icon_size=15,
                                                              width=20,
+                                                             bgcolor=ft.Colors.TRANSPARENT,
                                                              icon_color=self.inactive_color,
                                                              on_click=self.carousel_click,
                                                              ref=self.carousel_button_ref)
                                                if img != self.images[0] else ft.IconButton(
                                                    data=img,
-                                                   icon=ft.icons.CIRCLE,
+                                                   icon=ft.Icons.CIRCLE_OUTLINED,
                                                    icon_size=15,
                                                    width=20,
                                                    icon_color=self.active_color,
